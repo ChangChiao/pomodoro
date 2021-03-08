@@ -1,3 +1,8 @@
+### demo網址
+https://changchiao.github.io/pomodoro/
+
+利用React Hooks製作蕃茄鐘
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
