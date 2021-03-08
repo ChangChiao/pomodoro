@@ -80,8 +80,8 @@ const TodoList = (props) => {
                             {val.isEdit ? null : <span>{val.title} {isRunning && i === 0 ? <span className="ing">(進行中)</span> : null}</span>}
                             {val.isEdit ? <input type="text" value={name} onChange={e => setName(e.target.value)} /> : null}
                             <span>
-                                <img src="/images/icon-edit.svg" onClick={() => reviseItem(i)} alt="" />
-                                <img src="/images/icon-delete.svg" onClick={() => deleteItem(i)} alt="" />
+                                <img src={process.env.PUBLIC_URL + "/images/icon-edit.svg"} onClick={() => reviseItem(i)} alt="" />
+                                <img src={process.env.PUBLIC_URL + "/images/icon-delete.svg"} onClick={() => deleteItem(i)} alt="" />
                             </span>
                         </li>
                     )

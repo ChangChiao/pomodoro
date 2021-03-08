@@ -12,6 +12,7 @@ const MainPanel = forwardRef((props, ref) => {
     const todoList = useSelector(state => state.todoList);
     const isRunning = useSelector(state => state.isRunning)
     const dispatch = useDispatch();
+    
     let intervalId = useRef(null)
     let clockId = useRef(null)
 
@@ -108,7 +109,7 @@ const MainPanel = forwardRef((props, ref) => {
     const showIcon = useMemo(() => {
         const status = isRelaxTime ? 'green' : 'orange'
         const isWork = isRunning ? 'pause' : 'play'
-        return `/images/icon-${isWork}--${status}.svg`
+        return `${process.env.PUBLIC_URL}/images/icon-${isWork}--${status}.svg`
     }, [isRelaxTime, isRunning])
 
     useEffect(() => {
@@ -141,7 +142,7 @@ const MainPanel = forwardRef((props, ref) => {
                     </button>) : null
                 }
             </div>
-            <img className="tomato" src={`/images/tomato--${isRelaxTime ? 'green' : 'orange'}.svg`} />
+            <img className="tomato" src={`${process.env.PUBLIC_URL}/images/tomato--${isRelaxTime ? 'green' : 'orange'}.svg`} />
         </section>
     )
 })
